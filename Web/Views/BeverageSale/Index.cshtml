@@ -1,0 +1,205 @@
+﻿@model System.Data.DataTable
+@using System.Data;
+
+<link href="~/Content/jtable/themes/lightcolor/blue/jtable.css" rel="stylesheet" type="text/css" />
+<div class="container">
+    <div class="heads" style="background: url(/public/img/brewery-back1.jpg) 50% 27%;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>//</span>Beverage Sales Upload </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("Upload", "BeverageSale", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <input type="file" id="dataFile" name="upload" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Upload" class="btn btn-default" />
+    </div>
+
+    if (Model != null)
+    {
+        <table>
+            <thead>
+                <tr>
+                    @foreach (DataColumn col in Model.Columns)
+                    {
+                        <th>@col.ColumnName</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataRow row in Model.Rows)
+                {
+                    <tr>
+                        @foreach (DataColumn col in Model.Columns)
+                        {
+                            <td>@row[col.ColumnName]</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#BeverasaleContainer').jtable({
+            title: 'Beverage Sale List',
+            paging: true,
+            pageSize: 25,
+            toolbar: {
+    items: [{
+        Tooltip: 'Click here to export this table to excel',
+        //icon: '/images/paginate.gif',
+        text: 'Export to Excel',
+        click: function () {
+            window.location = 'getResult.php?formName=afscpEmp&action=export-excel';
+            e.preventDefault();
+        }
+    }]
+},
+            sorting: true,
+            defaultSorting: 'Name ASC',
+            actions: {
+                listAction: '@Url.Action("LoadBeveraleData")',
+                deleteAction: '@Url.Action("DeleteBeverage")',
+                @*updateAction: '@Url.Action("UpdateCustomerCode")',
+                createAction: '@Url.Action("CreateCustomerCode")'*@
+            },
+            fields: {
+                BeverageSaleId: {
+                    key: true,
+                    create: false,
+                    edit: false,
+                    list: false
+                },
+                 Bol_Number: {
+                    title: 'Bol#',
+                     width: '23%'
+                },
+                 MaterialId: {
+                    title: 'Material',
+                     width: '40%',
+                     options: '@Url.Action("GetMaterialOptions")'
+                },
+                Item_Code: {
+                    title: 'Item_Code',
+                    width: '33%',
+
+                },
+                Ship_To: {
+                    title: 'Ship_To',
+                    width: '23%'
+                },
+                Ship_To_Aplha_Name: {
+                    title: 'Ship_To_Aplha_Name',
+                    width: '23%'
+                },
+                Sold_To: {
+                    title: 'Sold_To',
+                    width: '23%'
+                },
+                Sold_To_Alpha_Name: {
+                    title: 'Sold_To_Alpha_Name',
+                    width: '23%'
+                },
+                Ship_From: {
+                    title: 'Ship_From',
+                    width: '23%'
+                },
+                Ship_Date: {
+                    title: 'Ship_Date',
+                    width: '23%',  type: 'date',
+                        displayFormat: 'yy-mm-dd'
+                },
+                //Ship_Time: {
+                //    title: 'Ship_Time',
+                //    width: '23%'
+                //},
+                //Promised_Date: {
+                //    title: 'Promised_Date',
+                //    width: '23%',
+                //     type: 'date',
+                //        displayFormat: 'yy-mm-dd'
+                //},
+                //Promised_Time: {
+                //    title: 'Promised_Time',
+                //    width: '23%'
+                //},
+
+                Carrier: {
+                    title: 'Carrier',
+                    width: '12%'
+                },
+                Trailer_Number: {
+                    title: 'Trailer_Number',
+                    width: '12%'
+                },
+                // Seal_Number: {
+                //    title: 'Seal#',
+                //    width: '12%'
+                //},
+                //Customer_PO: {
+                //    title: 'Customer_PO',
+                //    width: '12%'
+                //},
+                 Quantity: {
+                    title: 'Quantity',
+                    width: '12%'
+                },
+                  Size: {
+                    title: 'Size',
+                    width: '12%'
+                },
+                   Neck_Size: {
+                    title: 'Neck_Size ',
+                    width: '12%'
+                },
+                    CAN_END: {
+                    title: 'CAN_END ',
+                    width: '12%'
+                },
+
+            }
+        });
+
+        //Load student list from server
+        $('#LoadRecordsButton').click(function (e) {
+                e.preventDefault();
+                $('#BeverasaleContainer').jtable('load', {
+                    MaterialId: $('#Material').val(),
+
+                });
+            });
+          $('#LoadRecordsButton').click();
+    });
+</script>
+
+
+<div class="page-content">
+    <div class="container">
+        <div class="site-container">
+            <div class="filtering">
+                <form runat="server">
+                    <label>
+
+                        <button type="submit" id="LoadRecordsButton">
+                            Load records
+                        </button>
+                </form>
+            </div>
+            <div id="BeverasaleContainer"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5aff0da1-9bd3-4e2f-92f9-f7788e3a3fbe" ChangeDateTime="10/04/2020 02:08:22">
+    <Property Name="ElementName" Value="[dbo].[tblReturn].[To Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblReturn]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="To_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b4209359-a243-4634-a57f-50ef80570461" ChangeDateTime="10/04/2020 02:53:32">
+    <Property Name="ElementName" Value="[dbo].[tblProduct].[ItemNumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item_Number" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8f27b6bf-13d8-424a-a1c9-c28183dcac9f" ChangeDateTime="10/04/2020 02:53:37">
+    <Property Name="ElementName" Value="[dbo].[tblProduct].[ItemGroup]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item_Group" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6adca39-7e88-404b-9fec-dff237b7d3fd" ChangeDateTime="10/04/2020 02:53:41">
+    <Property Name="ElementName" Value="[dbo].[tblProduct].[CustomerGroup]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Customer_Group" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="017245e1-2194-4ca2-a3f2-115f120ac8c3" ChangeDateTime="10/04/2020 02:53:47">
+    <Property Name="ElementName" Value="[dbo].[tblProduct].[MaterialType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Material_Type" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9e4134e0-9718-47a5-82a2-a659b925cca4" ChangeDateTime="10/05/2020 19:28:39">
+    <Property Name="ElementName" Value="[dbo].[tblBeverageSale].[Ship-To_Aplha_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblBeverageSale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Ship_To_Aplha_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cb2608e5-70cc-4512-a241-01db3c338df0" ChangeDateTime="10/05/2020 19:29:32">
+    <Property Name="ElementName" Value="[dbo].[tblFoodSale].[TIME]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblFoodSale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Time" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f4d5e746-ed01-44e0-920d-e75031ba0fc2" ChangeDateTime="10/05/2020 19:29:50">
+    <Property Name="ElementName" Value="[dbo].[tblFoodSale].[TYPE]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblFoodSale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Type" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1adb3315-c2cf-4c14-95ae-476d5ff0085a" ChangeDateTime="10/05/2020 21:05:24">
+    <Property Name="ElementName" Value="[dbo].[tblReference]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[tblCustomerReference]" />
+  </Operation>
+</Operations>
