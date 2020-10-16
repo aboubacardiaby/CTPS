@@ -67,7 +67,9 @@
     </Compile>
     <Compile Include="BeverageSaleRepository.cs" />
     <Compile Include="IBeverageSaleRepository.cs" />
+    <Compile Include="IProductRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tblBeverageSale.cs">

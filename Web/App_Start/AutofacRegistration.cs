@@ -19,6 +19,7 @@ namespace Web.App_Start
 
             builder.RegisterType<Repository>().As<IRepository>();
             builder.RegisterType<BeverageSaleRepository>().As<IBeverageSaleRepository>();
+            builder.RegisterType<ProductRepository>().As<IProductRepository>();
 
 
             builder.RegisterFilterProvider();

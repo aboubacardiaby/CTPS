@@ -52,6 +52,7 @@ namespace Data
         }
         public List<tblCustomerReference> LoadCustomerReferencedata(int startIndex, int count, string sorting)
         {
+            _coreDBEntities.Database.Connection.Open();
             IEnumerable<tblCustomerReference>query = _coreDBEntities.tblCustomerReferences.ToList();
             if (string.IsNullOrEmpty(sorting) || sorting.Equals("Name ASC"))
             {
