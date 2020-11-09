@@ -38,7 +38,7 @@ namespace Data
         public string Eaches { get; set; }
         public string Customer_Item { get; set; }
         public string Item_Description { get; set; }
-        public long Size { get; set; }
+        public string Size { get; set; }
         public string Neck_Size { get; set; }
         public string CAN_END { get; set; }
         public System.DateTime CreateDate { get; set; }

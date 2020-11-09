@@ -36,7 +36,7 @@ namespace Data
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public string UpdatedBy { get; set; }
     
-        public virtual tblCustomerReference tblCustomerReference { get; set; }
         public virtual tblProduct_Reference tblProduct_Reference { get; set; }
+        public virtual tblCustomerReference tblCustomerReference { get; set; }
     }
 }

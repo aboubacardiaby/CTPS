@@ -62,7 +62,7 @@
     <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\tblReference.sql" />
+    <Build Include="Tables\tblCustomer.sql" />
     <Build Include="Tables\tblProduct.sql" />
     <Build Include="Tables\tblBeverage.sql" />
     <Build Include="Tables\tblReturn.sql" />
@@ -71,6 +71,10 @@
     <Build Include="Tables\tblMaterial_Handling.sql" />
     <Build Include="Tables\tblWarehouse.sql" />
     <Build Include="Tables\tblPlant.sql" />
+    <Build Include="Tables\TblCountry.sql" />
+    <Build Include="Tables\tblAddress.sql" />
+    <Build Include="Tables\tblCustomerInfo.sql" />
+    <Build Include="Tables\tblContact.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="CTPSCore.refactorlog" />
@@ -83,5 +87,6 @@
     <None Include="Scripts\Material.sql" />
     <None Include="Scripts\ProductReference.sql" />
     <None Include="Scripts\Customer_ReferenceData.sql" />
+    <None Include="Scripts\Countrydata.sql" />
   </ItemGroup>
 </Project>

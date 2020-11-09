@@ -13,4 +13,5 @@ Post-Deployment Script Template
 :r .\Scripts\ProductReference.sql
 :r .\Scripts\Material.sql
 :r .\Scripts\Customer_ReferenceData.sql
+:r .\Scripts\Countrydata.sql
 

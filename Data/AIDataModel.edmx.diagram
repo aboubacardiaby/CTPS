@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7dd70261998f438c9cf5ac30e495cd78" Name="Diagram1">
-        <EntityTypeShape EntityType="CoreDBModel.tblCustomerReference" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CoreDBModel.tblFoodSale" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CoreDBModel.tblMaterial_Handling" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="CoreDBModel.tblPlant" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
@@ -13,15 +12,24 @@
         <EntityTypeShape EntityType="CoreDBModel.tblProduct_Reference" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CoreDBModel.tblReturn" Width="1.5" PointX="9" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="CoreDBModel.tblWarehouse" Width="1.5" PointX="0.75" PointY="24" IsExpanded="true" />
-        <AssociationConnector Association="CoreDBModel.FK_tblFoodSaleSale_tblReference" ManuallyRouted="false" />
-        <AssociationConnector Association="CoreDBModel.FK_tblReturn_tblReference" ManuallyRouted="false" />
         <AssociationConnector Association="CoreDBModel.FK_tblProduct__tblFoodSale" ManuallyRouted="false" />
         <AssociationConnector Association="CoreDBModel.FK_tblReturn_tblProduct" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CoreDBModel.tblContact" Width="1.5" PointX="3" PointY="27.875" />
+        <EntityTypeShape EntityType="CoreDBModel.TblCountry" Width="1.5" PointX="0.75" PointY="30.75" />
+        <EntityTypeShape EntityType="CoreDBModel.tblCustomerInfo" Width="1.5" PointX="3" PointY="20.125" />
+        <EntityTypeShape EntityType="CoreDBModel.tblAddress" Width="1.5" PointX="9" PointY="23.5" />
+        <EntityTypeShape EntityType="CoreDBModel.tblCustomerReference" Width="1.5" PointX="0.75" PointY="17.25" />
+        <AssociationConnector Association="CoreDBModel.FK_Country_Address" />
+        <AssociationConnector Association="CoreDBModel.FK_tblCustomerReference_Address" />
+        <AssociationConnector Association="CoreDBModel.FK_Contact_Customer" />
+        <AssociationConnector Association="CoreDBModel.FK_CustomerInfo_Customer" />
+        <AssociationConnector Association="CoreDBModel.FK_tblFoodSaleSale_tblReference" />
+        <AssociationConnector Association="CoreDBModel.FK_tblReturn_tblReference" />
         <EntityTypeShape EntityType="CoreDBModel.tblBeverageSale" Width="1.5" PointX="3" PointY="9.875" />
         <AssociationConnector Association="CoreDBModel.FK_tblBeverageSale_tblMaterial" />
         <AssociationConnector Association="CoreDBModel.FK_tblBeverageSale_tblproductReference" />
         <AssociationConnector Association="CoreDBModel.FK_tblBeverageSale_tblReference" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

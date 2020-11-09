@@ -24,7 +24,7 @@
 	[Eaches]   VARCHAR(50)  NOT NULL,
 	[Customer_Item]   VARCHAR(50)  NOT NULL,
 	[Item_Description]   VARCHAR(max)  NOT NULL,
-	[Size]  BIGINT  NOT NULL,
+	[Size]   VARCHAR(50)  NOT NULL,
 	[Neck_Size]  VARCHAR(50)  NOT NULL,
 	[CAN_END]  VARCHAR(50)  NOT NULL,
 	[CreateDate] DATETIME     NOT NULL CONSTRAINT [DF_Beverage_CreateDate] DEFAULT (getdate()),

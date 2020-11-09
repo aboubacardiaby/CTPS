@@ -19,7 +19,7 @@ namespace UnitTests
         {
             List<Page> plist = new List<Page>();
 
-            var dt = ConvertCSVtoDataTable(@"C:\hu\Product Table2.csv");
+            var dt = ConvertCSVtoDataTable(@"C:\hu\Customer1.csv");
             //  var dt = ConvertCSVtoDataTable(@"C:\hu\Table.csv");
             //using (var context = new CtpsDataContext())
             //{

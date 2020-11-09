@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressInfo.cs" />
     <Compile Include="AIDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,7 +73,19 @@
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblAddress.cs">
+      <DependentUpon>AIDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblBeverageSale.cs">
+      <DependentUpon>AIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblContact.cs">
+      <DependentUpon>AIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblCountry.cs">
+      <DependentUpon>AIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCustomerInfo.cs">
       <DependentUpon>AIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tblCustomerReference.cs">

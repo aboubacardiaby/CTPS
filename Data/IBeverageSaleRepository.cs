@@ -10,8 +10,10 @@ namespace Data
     {
         void AddBeverageSale(tblBeverageSale beverageSale);
 
-        List<tblBeverageSale> LOadData(string name, int startIndex, int count, string sorting);
+        List<tblBeverageSale> LoadData(string name, int startIndex, int count, string sorting);
         List<tblMaterial_Handling> GetMaterial();
         void DeleteBeverage(int beverageId);
+        int BeveragedataCount();
+        List<tblBeverageSale> GetAllSaleData(string name);
     }
 }

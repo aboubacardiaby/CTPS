@@ -26,7 +26,6 @@ namespace Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tblCustomerReference> tblCustomerReferences { get; set; }
         public virtual DbSet<tblFoodSale> tblFoodSales { get; set; }
         public virtual DbSet<tblMaterial_Handling> tblMaterial_Handling { get; set; }
         public virtual DbSet<tblPlant> tblPlants { get; set; }
@@ -34,6 +33,11 @@ namespace Data
         public virtual DbSet<tblProduct_Reference> tblProduct_Reference { get; set; }
         public virtual DbSet<tblReturn> tblReturns { get; set; }
         public virtual DbSet<tblWarehouse> tblWarehouses { get; set; }
+        public virtual DbSet<tblContact> tblContacts { get; set; }
+        public virtual DbSet<TblCountry> TblCountries { get; set; }
+        public virtual DbSet<tblCustomerInfo> tblCustomerInfoes { get; set; }
+        public virtual DbSet<tblAddress> tblAddresses { get; set; }
+        public virtual DbSet<tblCustomerReference> tblCustomerReferences { get; set; }
         public virtual DbSet<tblBeverageSale> tblBeverageSales { get; set; }
     }
 }
